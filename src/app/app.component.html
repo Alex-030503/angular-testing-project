@@ -1,3 +1,14 @@
 <div>
-  <h1>Welcome to {{ title }}!</h1>
+<h1 style="color: blueviolet;"><strong>Evaluación Tareas</strong></h1>
+
+</div>
+
+<div class="container">
+  <input [(ngModel)]="newTask" placeholder="Agrega tarea" />
+  <button (click)="addTask()">Agregar</button>
+
+  @for (task of tasks; track $index) {
+    <app-task-list [task]="task"></app-task-list>
+  }
+
 </div>

@@ -1,1 +1,11 @@
-<p>task-list works!</p>
+<div class="task-list">
+    <span>{{task.nombre}}</span>
+
+  @if (editar) {
+    <input [(ngModel)]="nomEditado" />
+
+  } @else {
+
+    <button (click)="updateTask()">Editar</button>
+  }
+</div>
